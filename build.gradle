@@ -1,0 +1,35 @@
+plugins {
+    id 'application'
+
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group = 'ru.fairwol'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "11.0.2"
+    modules = ['javafx.controls', 'javafx.graphics']
+}
+
+dependencies {
+    implementation "no.tornado:tornadofx:1.7.20"
+    implementation 'at.favre.lib:bcrypt:0.10.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(8)
+}
+
+application {
+    mainClassName = 'MainKt'
+}
