@@ -136,9 +136,6 @@ class HashEncryptionUI : View("HashFX GUI") {
                 } else {
                     textAreaHash.promptText = NAME_TEXTAREA_PROMPT
 
-                    val coroutineScope = CoroutineScope(Dispatchers.Main)
-
-
                     GlobalScope.launch {
                         dialogBox.isVisible = true
                         sleep(3000)
